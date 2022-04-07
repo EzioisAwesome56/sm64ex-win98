@@ -5,7 +5,7 @@ Download and install the newest version of [Msys2](https://www.msys2.org/)<br>
 Open a msys2 32bit terminal and run the following commands:
 ```
 pacman -Syy
-pacman  -S unzip make git python3
+pacman -S unzip make git python3
 ```
 Do not install any version of gcc.<br>
 Download and install [TDM-GCC 5.1](https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download)<br>
@@ -32,7 +32,8 @@ Replace driverletter with the drive you installed TDM on, and fill in the path t
 Run ezmake.sh to build. The result will be placed into the build folder in the repo root.
 
 ## Additional notes
-As of now, you need KernelEX to launch the game due to GLEW32 being too new. Work is being done to resolve this
+As of now, you need KernelEX to launch the game due to GLEW32 being too new. Work is being done to resolve this<br>
+Building on Linux is untested and unsupported.
 
 ## Todo:
 remove KernelEX Requirement
