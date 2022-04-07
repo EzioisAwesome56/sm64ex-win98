@@ -659,7 +659,9 @@ ifeq ($(TARGET_WEB),1)
 else ifeq ($(WINDOWS_BUILD),1)
   LDFLAGS := $(BITS) -march=$(TARGET_ARCH) -Llib -lpthread $(BACKEND_LDFLAGS) -static
   ifeq ($(CROSS),)
-    LDFLAGS += -no-pie
+    # tdm-gcc doesnt know what this is
+	# LDFLAGS += -no-pie
+	LDFLAGS += -lsdl -lsdlmain
   endif
   ifeq ($(WINDOWS_CONSOLE),1)
     LDFLAGS += -mconsole
