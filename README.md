@@ -1,6 +1,6 @@
 # Super Mario 64 EX for Windows 98
 Fork of sm64ex that has been tweaked to build for Windows 98 using a custom msys2 toolchain.
-## toolchain setup
+## Toolchain Setup (Windows only!)
 Download and install the newest version of [Msys2](https://www.msys2.org/)<br>
 Open a msys2 32bit terminal and run the following commands:
 ```
@@ -31,7 +31,8 @@ export PATH=$PATH:/driveletter/path/to/tdm/bin
 Replace driverletter with the drive you installed TDM on, and fill in the path to the folder.<br>
 Run ezmake.sh to build. The result will be placed into the build folder in the repo root.<br>
 Before playing, open the copy of SDL you downloaded eariler, and copy SDL.dll from the archive's bin folder to the same location as your game's EXE<br>
-Download [glew32.dll compiled for Windows 98](https://github.com/EzioisAwesome56/sm64ex-win98/releases/download/GLEW32/glew32.dll) that I have provided. The copy included with the glew archive is compiled for Windows vista, and would thus require KernelEX. This version does not need KernelEX.
+Download [glew32.dll compiled for Windows 98](https://github.com/EzioisAwesome56/sm64ex-win98/releases/download/GLEW32/glew32.dll) that I have provided. The copy included with the glew archive is compiled for Windows vista, and would thus require KernelEX. This version does not need KernelEX.<br>
+Place this file in the same folder as your game EXE. You can now enjoy Super Mario 64 on Windows 98!
 
 ## Additional notes
 Building on Linux is untested and unsupported.
