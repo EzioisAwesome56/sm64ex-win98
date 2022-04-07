@@ -26,7 +26,7 @@ Save the file and exit<br>
 Copy a rom of us 1.0 mario 64 as baserom.us.z64 to the respository root.<br>
 Add your TDM's bin folder to your Msys2 terminal using the following command:
 ```
-export PATH=$PATH;/driveletter/path/to/tdm/bin
+export PATH=$PATH:/driveletter/path/to/tdm/bin
 ```
 Replace driverletter with the drive you installed TDM on, and fill in the path to the folder.<br>
 Run ezmake.sh to build. The result will be placed into the build folder in the repo root.
