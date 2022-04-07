@@ -30,6 +30,7 @@
 #include <aupvlist.h>
 #include <stdint.h>
 #include <sys/types.h>
+#include "fix.h"
 
 #define LIBAUDIOFILE_MAJOR_VERSION 0
 #define LIBAUDIOFILE_MINOR_VERSION 3
@@ -50,9 +51,6 @@ typedef struct _AFvirtualfile AFvirtualfile;
 typedef struct _AFfilesetup *AFfilesetup;
 typedef struct _AFfilehandle *AFfilehandle;
 typedef void (*AFerrfunc)(long, const char *);
-// lifted straight from the types.h file of tdm-gcc 5.1
-// we have to actually remove this line from tdm-gcc or it will cause a build failure later on
-typedef _ssize_t ssize_t;
 
 // Define AFframecount and AFfileoffset as 64-bit signed integers.
 #if defined(__FreeBSD__) || \

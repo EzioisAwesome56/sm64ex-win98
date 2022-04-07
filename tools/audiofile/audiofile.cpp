@@ -888,6 +888,7 @@ AFAPI int AUpvgetval (AUpvlist, int item, void *val);
 #include <aupvlist.h>
 #include <stdint.h>
 #include <sys/types.h>
+#include "fix.h"
 
 #define LIBAUDIOFILE_MAJOR_VERSION 0
 #define LIBAUDIOFILE_MINOR_VERSION 3
@@ -1501,6 +1502,7 @@ AFAPI int afSeekMisc (AFfilehandle, int miscellaneousid, int offset);
 #define AFINTERNAL_H
 
 #include <sys/types.h>
+#include "fix.h"
 
 enum status
 {
@@ -1733,6 +1735,7 @@ T hostToLittle(T value)
 
 
 #include <sys/types.h>
+#include "fix.h"
 #include <string>
 
 struct PCMInfo
@@ -2161,6 +2164,7 @@ private:
 
 
 #include <sys/types.h>
+#include "fix.h"
 
 class Buffer : public Shared<Buffer>
 {
@@ -2216,6 +2220,7 @@ private:
 #define FILE_H
 
 #include <sys/types.h>
+#include "fix.h"
 
 typedef struct _AFvirtualfile AFvirtualfile;
 
@@ -2736,6 +2741,7 @@ private:
 
 #include <stdint.h>
 #include <sys/types.h>
+#include "fix.h"
 #include <vector>
 
 class PacketTable : public Shared<PacketTable>
@@ -2999,6 +3005,7 @@ int _af_ulaw2linear (unsigned char u_val);
 
 #include <audiofile.h>
 #include <sys/types.h>
+#include "fix.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -8199,6 +8206,7 @@ Buffer::~Buffer()
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include "fix.h"
 #include <unistd.h>
 #include <stdio.h>
 
