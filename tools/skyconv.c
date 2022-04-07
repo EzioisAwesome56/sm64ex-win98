@@ -13,6 +13,10 @@
 #include "n64graphics.h"
 #include "utils.h"
 
+// lifted straight from the types.h file of tdm-gcc 5.1
+// we have to actually remove this line from tdm-gcc or it will cause a build failure later on
+typedef _ssize_t ssize_t;
+
 typedef struct {
     rgba *px;
     bool useless;
