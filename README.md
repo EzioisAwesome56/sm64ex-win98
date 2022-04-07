@@ -30,11 +30,11 @@ export PATH=$PATH:/driveletter/path/to/tdm/bin
 ```
 Replace driverletter with the drive you installed TDM on, and fill in the path to the folder.<br>
 Run ezmake.sh to build. The result will be placed into the build folder in the repo root.<br>
-Before playing, copy SDL.dll and glew32.dll from the downloads you got eariler and put them with the game's EXE.
+Before playing, open the copy of SDL you downloaded eariler, and copy SDL.dll from the archive's bin folder to the same location as your game's EXE<br>
+Download [glew32.dll compiled for Windows 98](https://github.com/EzioisAwesome56/sm64ex-win98/releases/download/GLEW32/glew32.dll) that I have provided. The copy included with the glew archive is compiled for Windows vista, and would thus require KernelEX. This version does not need KernelEX.
 
 ## Additional notes
-As of now, you need KernelEX to launch the game due to GLEW32 being too new. Work is being done to resolve this<br>
 Building on Linux is untested and unsupported.
 
 ## Todo:
-remove KernelEX Requirement
+Nothing atm
