@@ -1,2 +1,22 @@
 # Super Mario 64 EX for Windows 98
-todo: write decent build instructions
+Fork of sm64ex that has been tweaked to build for Windows 98 using a custom msys2 toolchain.
+## toolchain setup
+Download and install the newest version of msys2. ensure your package database is update to date.<br>
+Install the following packages via pacman: unzip make git python3. Do not install any version of gcc.<br>
+Download and install [TDM-GCC 5.1](https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download)<br>
+Download [sdl for mingw](http://libsdl.org/release/SDL-devel-1.2.14-mingw32.zip), extract its contents to the respective folders in your TDM-GCC install (I.E. contents of include go to TDM's include folder)<br>
+todo: find min version of GLEW that will work natively on Windows 98
+Open include/sys/types.h from your TDM install in a text editor. Comment out the following line:
+```
+#ifndef _SSIZE_T_
+#define _SSIZE_T_
+typedef int _ssize_t;
+
+#ifndef	_NO_OLDNAMES
+//typedef _ssize_t ssize_t; <--- comment out this line, found at line 118
+#endif
+#endif /* Not _SSIZE_T_ */ 
+```
+Save the file and exit<br>
+Copy a rom of us 1.0 mario 64 as baserom.us.z64 to the respository root.<br>
+Run ezmake.sh to build.
