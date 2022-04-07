@@ -10,7 +10,7 @@ pacman  -S unzip make git python3
 Do not install any version of gcc.<br>
 Download and install [TDM-GCC 5.1](https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download)<br>
 Download [sdl for mingw](http://libsdl.org/release/SDL-devel-1.2.14-mingw32.zip), extract its contents to the respective folders in your TDM-GCC install (I.E. contents of include go to TDM's include folder)<br>
-todo: find min version of GLEW that will work natively on Windows 98
+todo: find min version of GLEW that will work natively on Windows 98<br>
 Open include/sys/types.h from your TDM install in a text editor. Comment out the following line:
 ```
 #ifndef _SSIZE_T_
