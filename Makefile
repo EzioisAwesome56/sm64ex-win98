@@ -34,7 +34,7 @@ OSX_BUILD ?= 0
 NO_PIE ?= 1
 
 # Specify the target you are building for, TARGET_BITS=0 means native
-TARGET_ARCH ?= native
+TARGET_ARCH ?= pentium
 TARGET_BITS ?= 0
 
 # Disable better camera by default
@@ -554,7 +554,7 @@ ifeq ($(SDL2_USED),1)
   BACKEND_CFLAGS += -DHAVE_SDL2=1
 else ifeq ($(SDL1_USED),1)
   SDLCONFIG := $(CROSS)sdl-config
-  BACKEND_CFLAGS += -DHAVE_SDL1=1
+  BACKEND_CFLAGS += -DHAVE_SDL1=1 -march=pentium
 endif
 
 ifneq ($(SDL1_USED)$(SDL2_USED),00)
