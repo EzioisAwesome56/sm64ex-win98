@@ -1,0 +1,28 @@
+// sm64ex-win98 resource script
+// youve been ooga booga'd
+
+id ICON "mario64.ico"
+
+1 VERSIONINFO
+FILEVERSION     4,2,6,9
+PRODUCTVERSION  6,4,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "080904E4"
+    BEGIN
+      VALUE "CompanyName", "Github dot com"
+      VALUE "FileDescription", "Super Mario 64 EX for Windows 98"
+      VALUE "FileVersion", "1.0"
+      VALUE "InternalName", "sm64ex"
+      VALUE "LegalCopyright", "Copyright 1996 Nintendo for original Game"
+      VALUE "OriginalFilename", "sm64ex.exe"
+      VALUE "ProductName", "Super Mario 64 EX"
+      VALUE "ProductVersion", "6.4"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x809, 1252
+  END
+END

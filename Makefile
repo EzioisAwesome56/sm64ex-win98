@@ -717,6 +717,9 @@ ZEROTERM = $(PYTHON) $(TOOLS_DIR)/zeroterm.py
 
 ######################## Targets #############################
 
+# hack: do this also?
+all: $(BUILD_DIR)/mario64.res
+
 all: $(EXE)
 
 # thank you apple very cool
@@ -1011,6 +1014,10 @@ $(GLOBAL_ASM_DEP).$(NON_MATCHING):
 	@rm -f $(GLOBAL_ASM_DEP).*
 	touch $@
 
+# hack: this should enable our resource file, i think?
+$(BUILD_DIR)/mario64.res: src/winextra/mario64.rc
+	windres $^ -O coff -o $@
+
 $(BUILD_DIR)/%.o: %.cpp
 	@$(CXX) -fsyntax-only $(CFLAGS) -MMD -MP -MT $@ -MF $(BUILD_DIR)/$*.d $<
 	$(CXX) -c $(CFLAGS) -o $@ $<
@@ -1030,7 +1037,7 @@ $(BUILD_DIR)/%.o: %.s
 
 
 $(EXE): $(O_FILES) $(MIO0_FILES:.mio0=.o) $(SOUND_OBJ_FILES) $(ULTRA_O_FILES) $(GODDARD_O_FILES) $(BUILD_DIR)/$(RPC_LIBS)
-	$(LD) -L $(BUILD_DIR) -o $@ $(O_FILES) $(SOUND_OBJ_FILES) $(ULTRA_O_FILES) $(GODDARD_O_FILES) $(LDFLAGS)
+	$(LD) -L $(BUILD_DIR) -o $@ $(O_FILES) $(BUILD_DIR)/mario64.res $(SOUND_OBJ_FILES) $(ULTRA_O_FILES) $(GODDARD_O_FILES) $(LDFLAGS)
 
 .PHONY: all clean distclean default diff test load libultra res
 .PRECIOUS: $(BUILD_DIR)/bin/%.elf $(SOUND_BIN_DIR)/%.ctl $(SOUND_BIN_DIR)/%.tbl $(SOUND_SAMPLE_TABLES) $(SOUND_BIN_DIR)/%.s $(BUILD_DIR)/%
