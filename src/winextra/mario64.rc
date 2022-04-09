@@ -15,7 +15,7 @@ BEGIN
       VALUE "FileDescription", "Super Mario 64 EX for Windows 98"
       VALUE "FileVersion", "1.0"
       VALUE "InternalName", "sm64ex"
-      VALUE "LegalCopyright", "Copyright 1996 Nintendo for original Game"
+      VALUE "LegalCopyright", "Copyright 1996 Nintendo"
       VALUE "OriginalFilename", "sm64ex.exe"
       VALUE "ProductName", "Super Mario 64 EX"
       VALUE "ProductVersion", "6.4"
